@@ -84,8 +84,8 @@
 <h1 id="overview">Overview</h1>
 <p>The <a href="http://microbit.org/guide/">Micro:bit</a> is an amazing bit of kit for those of you who like building electronic gadgets and would like to control them using smart phones and tablets. </p>
 <p>It's ability to use Bluetooth Low Energy, it's ease to program and connect external components, makes the Micro:bit an ideal and cheap way to build interfaces.</p>
-<p>While I found examples of software running on Android devices that could communicate and control the Micro:bit, I found little on writing for Apple devices such as iPhones and iPads. I decided to address this by writing a module that provides a simple interface between Apple applications and the Micro:bit.</p>
-<p>See: <a href="https://phwallen.github.io/microbit-swift/">Microbit-Swift</a> for information on using the Microbit-Swift and it's associated Playground.</p>
+<p>While I found examples of software running on Android devices that could communicate and control the Micro:bit, I found little on writing for Apple devices such as iPhones and iPads. I decided to address this by writing a module, written in Swift, that provides a simple interface between Apple applications and the Micro:bit.</p>
+<p>See: <a href="https://phwallen.github.io/microbit-swift/">Microbit-Swift</a> for information on using the Microbit-Swift API and it's associated Playground.</p>
 <p>The Micro:bit Musical Instrument Controller is an example of using Microbit-Swift to control an iPhone/iPad application. As you can see from the video I'm not likely to be seen as competing with Stradivari when it comes to building musical instruments, but I hope it demonstrates how a few electronic components can control an iPhone/iPad App.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VdGRsR1m2Oo" frameborder="0" allowfullscreen></iframe>
 
@@ -149,7 +149,7 @@
 <h1 id="microbit-swift-api">Microbit-Swift API</h1>
 <p>Central to this project is to demonstrate the Microbit-Swift application programming interface allowing Apps written for Apple operating systems to communicate with a Micro:bit.</p>
 <p>For information about the API see : <a href="https://phwallen.github.io/microbit-swift/">Micro:bit Swift Bluetooth LE</a>.</p>
-<p>The API is written in the Swift programming language and exploits the Apple Core Bluetooth framework. It's easily installed in any Xcode project by simply copying <a href="https://github.com/phwallen/microbit-swift/blob/master/Microbit/Microbit/Microbit.swift">Microbit.swift</a> into an Xcode project.</p>
+<p>The API is written in the Swift programming language and exploits the Apple Core Bluetooth framework. It's easily installed in any Xcode project by simply copying <a href="https://github.com/phwallen/microbit-swift/blob/master/Microbit/Microbit/Microbit.swift">Microbit.swift</a> into the project.</p>
 <h1 id="microbit-midi-controller">Micro:bit Midi Controller</h1>
 <p>The controller is a simple iOS application that exploits the CoreMIDI framework to create a MIDI virtual source  that can be discovered by GarageBand.</p>
 <p>The controller constructs MIDI messages -</p>
@@ -174,7 +174,7 @@
 <pre><code>microbit.startScanning()
 </code></pre>
 
-<h5 id="specify-what-happens-when-the-accelerometer-and-event-services-are-detected">specify what happens when the Accelerometer and Event services are detected.</h5>
+<h5 id="specify-what-happens-when-the-accelerometer-and-event-services-are-detected">Specify what happens when the Accelerometer and Event services are detected.</h5>
 <ul>
 <li>Accelerometer - set a reporting period of 160 milliseconds.</li>
 <li>Event - register the micro:bit events the app is interested in.</li>
@@ -192,7 +192,7 @@
     }
 </code></pre>
 
-<h5 id="specify-what-happens-when-the-app-receives-one-of-the-registered-events">specify what happens when the app receives one of the registered events.</h5>
+<h5 id="specify-what-happens-when-the-app-receives-one-of-the-registered-events">Specify what happens when the app receives one of the registered events.</h5>
 <ul>
 <li>9010 pressure has been detected on the SoftPot. Using the resistor values specified (see Sensors and Switches above), a value of 0 represents the bottom of the sensor, a value of 900 represents the top of the sensor, a value &gt; 900 means no pressure on the sensor. The values can be used to determine which note or notes (if in chord mode) have been selected facilitating the construction of the appropriate MIDI message(s).</li>
 <li>9011 pressure has been detected on the FSR. A value of 900 means maximum pressure while 0 means no pressure. The values can be used to determine the velocity specified in the MIDI message.</li>
@@ -295,5 +295,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2018-01-24 16:40:21.976257
+Build Date UTC : 2018-01-24 19:35:04.580526
 -->
