@@ -11,7 +11,7 @@ See: [Microbit-Swift](https://phwallen.github.io/microbit-swift/) for informatio
 The Micro:bit Musical Instrument Controller is an example of using Microbit-Swift to control an iPhone/iPad application. As you can see from the video I'm not likely to be seen as competing with Stradivari when it comes to building musical instruments, but I hope it demonstrates how a few electronic components can control an iPhone/iPad App.
    
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VdGRsR1m2Oo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/Jflf77bLC34" frameborder="0" allowfullscreen></iframe>
 
 The block diagram below shows the components of the Musical Instrument Controller.
 
